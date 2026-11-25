@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klinik Makmur Jaya — Apotek Daring Terpercaya</title>
+<meta name="description" content="Belanja obat resep, obat bebas, suplemen, dan alat kesehatan secara daring dari Klinik Makmur Jaya.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<!-- Bootstrap 5 & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Swiper (carousel produk unggulan) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- CSS internal -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+<a href="#konten-utama" class="skip-link">Lompat ke konten utama</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg py-2" aria-label="Navigasi utama">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-kmj" href="index.html">
+        <span class="logo-mark"><img src="images/logo.png" alt="Logo Klinik Makmur Jaya" class="logo-image"></span>
+        Klinik Makmur Jaya
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navUtama" aria-controls="navUtama" aria-expanded="false" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navUtama">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-kmj active" aria-current="page" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-kmj" href="katalog.html">Katalog Obat</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-kmj" href="tentang.html">Tentang</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-outline-teal btn-sm"><i class="bi bi-person" aria-hidden="true"></i> Masuk</a>
+          <a href="keranjang.html" class="btn btn-teal btn-sm cart-icon-wrap" aria-label="Lihat keranjang belanja">
+            <i class="bi bi-bag" aria-hidden="true"></i> Keranjang
+            <span class="badge d-none" data-cart-badge>0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="konten-utama">
+
+  <!-- ================= HERO / BANNER PROMOSI ================= -->
+  <section class="hero-banner">
+    <div class="hero-decor" aria-hidden="true"></div>
+    <div class="hero-decor two" aria-hidden="true"></div>
+    <div class="container py-5 position-relative">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge-teal mb-3 d-inline-block" style="background:rgba(255,255,255,0.15); color:#fff;">Gratis ongkir belanja di atas Rp200.000</span>
+          <h1 class="display-6 fw-bold mb-3">Kebutuhan obat dan kesehatan Anda, satu klik saja</h1>
+          <p class="lead mb-4">Klinik Makmur Jaya kini hadir daring — pesan obat resep, obat bebas, suplemen, dan alat kesehatan kapan saja, tanpa harus menunggu jam operasional klinik.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="katalog.html" class="btn btn-light fw-semibold px-4"><i class="bi bi-search" aria-hidden="true"></i> Cari Obat</a>
+            <a href="#kategori" class="btn btn-outline-light px-4">Lihat Kategori</a>
+          </div>
+          <div class="hero-stats">
+            <div><span class="stat-num">150–200</span><span class="stat-label">Pasien dilayani / hari</span></div>
+            <div><span class="stat-num">2.000+</span><span class="stat-label">Jenis obat tersedia</span></div>
+            <div><span class="stat-num">24/7</span><span class="stat-label">Akses pemesanan daring</span></div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+          <i class="bi bi-heart-pulse" style="font-size: 13rem; color: rgba(255,255,255,0.15);" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KATEGORI ================= -->
+  <section class="section-wrap" id="kategori">
+    <div class="container">
+      <h2 class="section-title">Kategori Obat</h2>
+      <p class="section-subtitle">Telusuri produk berdasarkan kategori yang Anda butuhkan.</p>
+      <div class="row g-3" id="kategoriGrid" role="list">
+        <!-- diisi oleh JavaScript (js/pages/home.js) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUK UNGGULAN ================= -->
+  <section class="section-wrap bg-white" style="background:var(--teal-050);">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap mb-2">
+        <div>
+          <h2 class="section-title mb-1">Produk Unggulan</h2>
+          <p class="section-subtitle mb-0">Pilihan terpopuler dari pasien Klinik Makmur Jaya.</p>
+        </div>
+        <a href="katalog.html" class="btn btn-outline-teal">Lihat Semua <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="swiper featured-swiper mt-4" aria-label="Galeri produk unggulan">
+        <div class="swiper-wrapper" id="unggulanWrapper">
+          <!-- slide diisi oleh JavaScript -->
+        </div>
+        <div class="swiper-button-next" role="button" aria-label="Produk berikutnya"></div>
+        <div class="swiper-button-prev" role="button" aria-label="Produk sebelumnya"></div>
+        <div class="swiper-pagination mt-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATISTIK KATEGORI (CHART) ================= -->
+  <section class="section-wrap">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5">
+          <h2 class="section-title">Ketersediaan Stok per Kategori</h2>
+          <p class="section-subtitle">Data ringkas untuk membantu Anda mengetahui kategori mana yang paling banyak tersedia saat ini.</p>
+          <a href="katalog.html" class="btn btn-teal">Mulai Belanja</a>
+        </div>
+        <div class="col-lg-7">
+          <div class="chart-card">
+            <canvas id="chartStokKategori" height="180" role="img" aria-label="Grafik batang stok obat per kategori"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KEUNGGULAN ================= -->
+  <section class="section-wrap" style="background:var(--teal-050);">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <i class="bi bi-truck fs-1" style="color:var(--teal-600);" aria-hidden="true"></i>
+          <h3 class="h6 mt-3">Pengiriman Cepat</h3>
+          <p class="text-secondary small">Pesanan diproses dan dikirim langsung dari apotek klinik.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-shield-check fs-1" style="color:var(--teal-600);" aria-hidden="true"></i>
+          <h3 class="h6 mt-3">Obat Terjamin Asli</h3>
+          <p class="text-secondary small">Seluruh produk dikelola langsung oleh apoteker klinik.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-headset fs-1" style="color:var(--teal-600);" aria-hidden="true"></i>
+          <h3 class="h6 mt-3">Konsultasi Apoteker</h3>
+          <p class="text-secondary small">Tim apoteker siap membantu pertanyaan seputar obat Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer" id="footer-utama">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h6><i class="bi bi-capsule" aria-hidden="true"></i> Klinik Makmur Jaya</h6>
+        <p class="small">Klinik kesehatan dengan layanan konsultasi medis dan apotek daring, melayani kebutuhan obat masyarakat setiap hari.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Navigasi</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="katalog.html">Katalog</a></li>
+          <li><a href="keranjang.html">Keranjang</a></li>
+          <li><a href="login.html">Masuk</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6>Kategori</h6>
+        <ul class="list-unstyled small">
+          <li><a href="katalog.html?kategori=resep">Obat Resep</a></li>
+          <li><a href="katalog.html?kategori=bebas">Obat Bebas</a></li>
+          <li><a href="katalog.html?kategori=suplemen">Suplemen</a></li>
+          <li><a href="katalog.html?kategori=alkes">Alat Kesehatan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6>Hubungi Kami</h6>
+        <ul class="list-unstyled small">
+          <li><i class="bi bi-geo-alt" aria-hidden="true"></i> Jl. Sehat Sejahtera No. 10</li>
+          <li><i class="bi bi-telephone" aria-hidden="true"></i> (021) 555-0123</li>
+          <li><i class="bi bi-envelope" aria-hidden="true"></i> cs@klinikmakmurjaya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      &copy; 2026 Klinik Makmur Jaya.
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="js/config.js"></script>
+<script src="js/data/produk.js"></script>
+<script src="js/modules/utils.js"></script>
+<script src="js/modules/product.js"></script>
+<script src="js/modules/cart.js"></script>
+<script src="js/modules/auth.js"></script>
+<script src="js/pages/home.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
